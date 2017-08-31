@@ -1,1 +1,3 @@
-123456
+function dictionary() {
+	this.datastore = new Array();
+}
