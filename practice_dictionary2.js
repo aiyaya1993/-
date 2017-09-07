@@ -8,10 +8,51 @@
 function division(sentence) {
 	var arr = new Array(); //定义一个数组
 	strs = sentence.split(' ');
-	console.log(strs)
+	return strs;
 	/*for(var i = 0; i<strs.length; i++){
 		arr[i]
 	}*/
 }
+//字典的实现
+function Dictionary() {
+	var key = this.key;
+	//var nums = this.nums;
+	var words = this.words;
+	var add = this.add;
+	var datastore = this.datastore;
+}
+//添加函数
+function add(key,value) {
+	this.datastore[key] = value;
+}
+//取出文本中的每个单词作为索引key
+function test(arr) {
+	var a = new Array();
+	for(key in arr){
+	//	console.log(key)
+	n = arr[key] 
+	a[n] = 0;
+	}
+	console.log(a);
+}
+//计数器的实现
+function count(arr,words) {
+	//var count = 0;
+	/*for(var i = 0; i<arr.length; i++) {
+		arr[]
+	}*/
+	//for(key in arr){
+	for(n in words){
+		var temp = words[n];
+		for(key in arr){
+			if(key == temp){
+				arr[key]++;
+			}
+		}
+  	}
+	//}
+}
+//把每个单词作为key传入字典
 var a = 'apple a hh ui';
-division(a);
+var words = division(a);
+test(words);
