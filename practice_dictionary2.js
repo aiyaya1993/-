@@ -51,7 +51,7 @@ function count(arr,words) {
 			}
 		}
   	}
-  	console.log(arr)
+  	console.log(arr.sort())
 	//}
 }
 //把每个单词作为key传入字典
