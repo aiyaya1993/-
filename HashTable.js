@@ -7,14 +7,18 @@ function HashTable() {
 }
 /*
  *除留余数法
+ *hash(K=K mod C
  *键一般是字符串类型
  *将字符串中每个字符的ASCII相加
  *散列值就是ASCII码值的和除以数组长度的余数
 */
+//返回数组中每一个元素（字符串）的ascii码对应的余数值
+//键值 = ASCII码和 mod 数组长度
 function simpleHash(data) {
 	var total = 0;
 	for(var i = 0; i < data.length; ++i){
 		total += data.charCodeAt(i); //返回unicode编码
+		console.log(total)
 	}
 	return total % this.table.length;
 }
