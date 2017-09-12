@@ -15,7 +15,7 @@ function getStuData(arr) {
 			num += Math.floor(Math.random()*10); //随机一位数
 			console.log(num)
 		}
-		num += getRandomInt(50,100);
+		num += getRandomInt(50,100); //随机成绩生成
 		arr[i] = num;
 	}
 	console.log(arr)
