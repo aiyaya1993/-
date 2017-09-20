@@ -32,7 +32,9 @@ function find(item){
 //在item元素之后插入ele元素
 function insert(ele,item){
 	var newNode = new Node(ele);
+	console.log(newNode.ele)
 	var currNode = this.find(item);
+	console.log(currNode)
   newNode.next = currNode.next;
   newNode.previous = currNode;
   currNode.next = newNode;
@@ -41,14 +43,18 @@ function insert(ele,item){
 function remove(item){
 	var currNode = this.find(item);
 	var a = currNode.previous;
-	a.next = currNode.next
+	a.next = currNode.next;
 }
 //找到链表中最后一个节点
 function findLast() {
-	var currNode = new Node('head');
+	var currNode = this.head;
+	console.log(currNode.next)
 	while(currNode.next != null){
+		console.log(90)
 		currNode = currNode.next;
+		//console.log(currNode.next)
 	}
+	console.log(currNode.ele)
 	return currNode;
 }
 //正向读取链表元素
@@ -61,12 +67,14 @@ function display() {
 	//console.log('display')
 }
 function dispReverse() {
-	var currNode = this.head;
-	currNode = this.findLast();
+	//var currNode = this.head;
+	var currNode = this.findLast();
 	while(currNode.previous != null){
 		console.log(currNode.ele);
+		//console.log(123456)
 		currNode = currNode.previous;
 	}
+	//console.log(123456)
 }
 //当前节点在链表中向前移动n个节点
 function advance(n) {
@@ -78,13 +86,19 @@ function show(item) {
 		currNode = currNode.next;
 		//console.log
 	}
-	console.log(currNode.ele)
+	console.log(currNode)
 	//return currNode;
 }
 var color = new Llist();
 color.insert('red','head');
 color.insert('blue','red');
-color.insert('yelllow','blue');
+//color.find("red")
+console.log(color.ele);
+color.findLast();
+color.dispReverse();
+//color.insert('blue','red');
+//color.insert('yelllow','blue');
 //color.display();
-color.remove('red');
-color.show('yelllow');
+//color.remove('red');
+//color.findLast();
+//color.show('yelllow');
